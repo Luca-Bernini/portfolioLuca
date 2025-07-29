@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { CheckBadgeIcon, CloudIcon, ShieldCheckIcon, CpuChipIcon, ClockIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 interface Certification {
   id: string
@@ -13,6 +14,7 @@ interface Certification {
   status: 'completed' | 'next-up'
   credentialId?: string
   verifyUrl?: string
+  badgeImage?: string
 }
 
 const certifications: Certification[] = [
@@ -24,8 +26,9 @@ const certifications: Certification[] = [
     color: 'from-orange-500 to-yellow-500',
     date: '2024',
     status: 'completed',
-    credentialId: 'AWS-CCP-123456',
-    verifyUrl: 'https://aws.amazon.com/verification'
+    credentialId: 'AWS-CCP-XXXXXX',
+    verifyUrl: 'https://aws.amazon.com/verification',
+    badgeImage: '/images/cloud_practitioner.png'
   },
   {
     id: 'aws-solutions-architect',
@@ -99,9 +102,19 @@ const CertificationsSection = () => {
                 <div className="relative z-10">
                   {/* Icon and Provider */}
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${cert.color} bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300`}>
-                      <IconComponent className={`w-6 h-6 text-transparent bg-gradient-to-br ${cert.color} bg-clip-text`} />
-                    </div>
+                    {cert.badgeImage ? (
+                      <Image 
+                        src={cert.badgeImage} 
+                        alt={`${cert.name} badge`}
+                        width={55}
+                        height={55}
+                        className="w-20 h-20"
+                      />
+                    ) : (
+                      <div className={`p-3 rounded-xl bg-gradient-to-br ${cert.color} bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300`}>
+                        <IconComponent className={`w-6 h-6 text-transparent bg-gradient-to-br ${cert.color} bg-clip-text`} />
+                      </div>
+                    )}
                     <div className="text-right">
                       <div className={`text-xs font-medium ${
                         isCompleted ? 'text-text-secondary/60' : 'text-yellow-500/80'

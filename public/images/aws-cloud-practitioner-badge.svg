@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Outer hexagon border -->
+  <path d="M200 20 L340 90 L340 230 L200 300 L60 230 L60 90 Z" fill="#E8E8E8" stroke="none"/>
+  
+  <!-- Inner hexagon -->
+  <path d="M200 35 L325 95 L325 215 L200 275 L75 215 L75 95 Z" fill="#4A5568" stroke="none"/>
+  
+  <!-- AWS logo -->
+  <g transform="translate(200,120)">
+    <!-- AWS text -->
+    <text x="-25" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">aws</text>
+    <!-- Orange smile -->
+    <path d="M30 -5 Q35 0 30 5" stroke="#FF9900" stroke-width="3" fill="none"/>
+    <circle cx="35" cy="0" r="2" fill="#FF9900"/>
+  </g>
+  
+  <!-- Certified text -->
+  <text x="200" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">certified</text>
+  
+  <!-- Horizontal line -->
+  <line x1="120" y1="155" x2="280" y2="155" stroke="white" stroke-width="1"/>
+  
+  <!-- Cloud Practitioner text -->
+  <text x="200" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">Cloud</text>
+  <text x="200" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">Practitioner</text>
+  
+  <!-- Foundational text -->
+  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" letter-spacing="2px">F O U N D A T I O N A L</text>
+</svg>

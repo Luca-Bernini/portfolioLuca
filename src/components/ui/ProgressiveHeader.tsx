@@ -170,7 +170,7 @@ const ProgressiveHeader = () => {
                       animate="visible"
                       exit="exit"
                       href="#about"
-                      className="text-text-secondary/80 hover:text-text-primary transition-all duration-300 font-medium hover:scale-105 inline-block"
+                      className="text-text-secondary/80 hover:text-text-primary transition-all duration-300 font-medium hover:scale-105 inline-block focus:outline-none focus:ring-0 focus:border-transparent"
                       whileHover={{
                         scale: 1.05,
                         color: '#ffffff',
@@ -191,7 +191,7 @@ const ProgressiveHeader = () => {
                       animate="visible"
                       exit="exit"
                       href="#projects"
-                      className="text-text-secondary/80 hover:text-text-primary transition-all duration-300 font-medium hover:scale-105 inline-block"
+                      className="text-text-secondary/80 hover:text-text-primary transition-all duration-300 font-medium hover:scale-105 inline-block focus:outline-none focus:ring-0 focus:border-transparent"
                       whileHover={{
                         scale: 1.05,
                         color: '#ffffff',
@@ -218,7 +218,7 @@ const ProgressiveHeader = () => {
                   }}
                   whileTap={{ scale: 0.95 }}
                   onClick={scrollToTop}
-                  className="text-xl font-semibold text-text-primary/90 hover:text-text-primary transition-all duration-300 cursor-pointer relative"
+                  className="text-xl font-semibold text-text-primary/90 hover:text-text-primary transition-all duration-300 cursor-pointer relative focus:outline-none focus:ring-0 focus:border-transparent"
                 >
                   <motion.span
                     className="relative z-10"
@@ -248,7 +248,7 @@ const ProgressiveHeader = () => {
                   animate="visible"
                   exit="exit"
                   onClick={toggleMagneticScroll}
-                  className={`relative inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                  className={`relative inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 focus:outline-none focus:ring-0 focus:border-transparent ${
                     isMagneticScrollEnabled 
                       ? 'bg-accent-500/20 text-accent-400 border border-accent-500/30' 
                       : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'

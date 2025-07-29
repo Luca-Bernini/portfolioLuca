@@ -13,7 +13,7 @@ const Header = () => {
           <div className="flex-1">
             <a
               href="#about"
-              className="text-text-secondary/80 hover:text-text-primary transition-colors"
+              className="text-text-secondary/80 hover:text-text-primary transition-colors focus:outline-none focus:ring-0 focus:border-transparent"
             >
               About
             </a>
@@ -23,7 +23,7 @@ const Header = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <button
               onClick={scrollToTop}
-              className="text-xl font-semibold text-text-primary/90 hover:text-text-primary transition-colors"
+              className="text-xl font-semibold text-text-primary/90 hover:text-text-primary transition-colors focus:outline-none focus:ring-0 focus:border-transparent"
             >
               Luca
             </button>
@@ -33,7 +33,7 @@ const Header = () => {
           <div className="flex-1 flex justify-end">
             <a
               href="#projects"
-              className="text-text-secondary/80 hover:text-text-primary transition-colors"
+              className="text-text-secondary/80 hover:text-text-primary transition-colors focus:outline-none focus:ring-0 focus:border-transparent"
             >
               Projects
             </a>

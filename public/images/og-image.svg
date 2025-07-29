@@ -1,0 +1,40 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF0000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF0000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Main title -->
+  <text x="600" y="250" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#textGrad)" text-anchor="middle">Luca</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="320" font-family="Inter, Arial, sans-serif" font-size="36" fill="#CCCCCC" text-anchor="middle">SecDevOps Portfolio</text>
+  
+  <!-- Skills -->
+  <text x="600" y="380" font-family="Inter, Arial, sans-serif" font-size="24" fill="#999999" text-anchor="middle">AWS • Cybersecurity • Cloud Infrastructure • Python</text>
+  
+  <!-- Accent line -->
+  <line x1="300" y1="450" x2="900" y2="450" stroke="#FF0000" stroke-width="3"/>
+  
+  <!-- Bottom text -->
+  <text x="600" y="520" font-family="Inter, Arial, sans-serif" font-size="20" fill="#666666" text-anchor="middle">Showcasing innovative solutions and secure development practices</text>
+</svg>

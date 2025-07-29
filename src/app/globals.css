@@ -16,73 +16,26 @@
   transition: all 0.2s ease-in-out;
 }
 
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Focus styles for accessibility */
-*:focus {
+/* Accessible focus styles for keyboard navigation */
+*:focus-visible {
   outline: 2px solid #FF0000;
   outline-offset: 2px;
 }
 
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
+/* Remove focus outline for mouse users while maintaining accessibility */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
+/* Ensure interactive elements are accessible */
+a, button {
+  cursor: pointer;
 }
 
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid #FF0000;
-  outline-offset: 2px;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid #FF0000;
-  outline-offset: 2px;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid #FF0000;
-  outline-offset: 2px;
-}
-
-/* Smooth transitions */
-* {
-  transition: all 0.2s ease-in-out;
+/* Prevent text selection on interactive elements */
+button {
+  user-select: none;
 }
 
 /* Smooth transitions */

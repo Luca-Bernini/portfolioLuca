@@ -138,6 +138,68 @@ The website is optimized for:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🔒 Security
+
+This project implements several security best practices:
+
+### Security Headers
+- **X-Frame-Options**: Prevents clickjacking attacks
+- **X-Content-Type-Options**: Prevents MIME type sniffing
+- **X-XSS-Protection**: Enables XSS filtering
+- **Referrer-Policy**: Controls referrer information
+- **Permissions-Policy**: Restricts access to browser features
+
+### Docker Security
+- Multi-stage builds for minimal attack surface
+- Non-root user execution
+- Security updates in base images
+- Optimized layer caching
+
+### Code Security
+- TypeScript for type safety
+- ESLint for code quality
+- Proper input validation
+- Accessible focus management
+- No hardcoded secrets or credentials
+
+### Environment Variables
+- `.env.example` file for reference
+- Proper `.gitignore` configuration
+- Environment-specific configurations
+
+### Dependencies
+- Regular dependency updates
+- Minimal dependency footprint
+- Production-only dependencies in Docker
+
+## 🔍 SEO Optimization
+
+This portfolio is optimized for search engines and social media sharing:
+
+### Meta Tags & Open Graph
+- Comprehensive meta descriptions and keywords
+- Open Graph tags for social media sharing
+- Twitter Card support
+- Structured data (JSON-LD) for rich snippets
+
+### Technical SEO
+- **robots.txt**: Search engine crawling instructions
+- **sitemap.xml**: Site structure for search engines
+- **Canonical URLs**: Prevent duplicate content issues
+- **Semantic HTML**: Proper heading hierarchy and structure
+
+### Performance SEO
+- Optimized images with proper alt text
+- Fast loading times with Next.js optimization
+- Mobile-responsive design
+- Accessibility compliance
+
+### Content SEO
+- Descriptive page titles and meta descriptions
+- Keyword optimization for SecDevOps and AWS
+- Professional portfolio structure
+- Regular content updates
+
 ## 📞 Contact
 
 - **Email**: luca@example.com
