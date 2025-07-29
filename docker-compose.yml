@@ -14,7 +14,6 @@ services:
       - .:/app
       - /app/node_modules
       - /app/.next
-    command: npm run dev
 
   # Development service with hot reload
   portfolio-dev:
