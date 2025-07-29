@@ -2,9 +2,9 @@
 
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import { HeroSection, AboutSection, ProjectsSection, Footer } from '@/components/sections'
-import { Header } from '@/components/ui'
+import { HeroSection, AboutSection, CertificationsSection, ProjectsSection, Footer } from '@/components/sections'
 import { ParallaxBackground, ProgressBar, ScrollController } from '@/components/client'
+import Particles from '@/components/animations/Particles'
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -21,27 +21,29 @@ export default function Home() {
         ref={containerRef}
         className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700"
       >
-        {/* Fixed Header */}
-        <div className="fixed top-0 left-0 right-0 z-50">
-          <Header />
+        {/* Reduced particle count for better performance */}
+        <div className="fixed inset-0 z-0">
+          <Particles 
+            particleCount={300}  // Reduced from 400
+            particleSpread={20}
+            speed={0.02}  // Reduced speed
+            particleColors={["#FF0000", "#FFFFFF", "#FF4444", "#FFAAAA", "#FF6666"]}
+            moveParticlesOnHover={true}  // Disabled for performance
+            particleHoverFactor={0.3}
+            alphaParticles={true}
+            particleBaseSize={55}  // Reduced size
+            sizeRandomness={1.5}
+            cameraDistance={30}
+            disableRotation={false}
+          />
         </div>
         
-        {/* Parallax Sections */}
-        <motion.div 
-          className="snap-section relative z-10"
-          style={{
-            minHeight: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        {/* Hero Section - no animation to prevent conflicts */}
+        <div className="snap-section relative z-10" style={{ minHeight: '100vh' }}>
           <HeroSection />
-        </motion.div>
+        </div>
         
+        {/* Other sections with optimized animations */}
         <motion.div 
           className="snap-section relative z-10"
           style={{
@@ -52,8 +54,8 @@ export default function Home() {
           }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}  // Changed to once: true
         >
           <AboutSection />
         </motion.div>
@@ -68,59 +70,44 @@ export default function Home() {
           }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}  // Changed to once: true
+        >
+          <CertificationsSection />
+        </motion.div>
+        
+        <motion.div 
+          className="snap-section relative z-10"
+          style={{
+            minHeight: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}  // Changed to once: true
         >
           <ProjectsSection />
         </motion.div>
         
-        {/* Footer Section - Adjusted height */}
+        {/* Footer Section */}
         <motion.div 
           className="snap-section relative z-10"
           style={{
-            minHeight: 'auto', // Changed from '100vh' to 'auto'
+            minHeight: 'auto',
             display: 'flex',
             alignItems: 'stretch',
             justifyContent: 'stretch'
           }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}  // Changed to once: true
         >
           <Footer />
         </motion.div>
-        
-        {/* Parallax Background Elements */}
-        <div className="fixed inset-0 z-0 pointer-events-none">
-          {[1, 2, 3, 4, 5].map((i) => {
-            const yOffset = useTransform(
-              scrollYProgress,
-              [0, 1],
-              [0, (50 + i * 20) * (i % 2 === 0 ? 1 : -1)]
-            )
-            
-            return (
-              <motion.div
-                key={i}
-                className="absolute rounded-full opacity-5"
-                style={{
-                  width: `${60 + i * 20}px`,
-                  height: `${60 + i * 20}px`,
-                  background: `radial-gradient(circle, rgba(255,0,0,${0.1 + i * 0.05}) 0%, rgba(51,51,51,${0.05 + i * 0.02}) 100%)`,
-                  left: `${5 + i * 18}%`,
-                  top: `${10 + i * 15}%`,
-                  y: yOffset
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 100 - i * 10,
-                  damping: 20 + i * 5
-                }}
-              />
-            )
-          })}
-        </div>
       </div>
       
       <ProgressBar />

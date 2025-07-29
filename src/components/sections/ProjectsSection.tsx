@@ -61,8 +61,8 @@ const ProjectsSection = () => {
                 </div>
                 
                 <Link 
-                  href={`/projects/${project.slug}`}
-                  className="inline-flex items-center text-accent-500 hover:text-accent-400 font-medium transition-colors"
+                  href="/projects/devops_project"
+                  className="inline-flex items-center text-accent-500 hover:text-accent-400 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500/50 focus:ring-offset-2 focus:ring-offset-primary-800 rounded-md px-2 py-1 -mx-2 -my-1 active:scale-95"
                 >
                   View Project
                   <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1" />

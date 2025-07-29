@@ -2,22 +2,13 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ProgressiveHeader } from '@/components/ui'
+import { MagneticScrollProvider } from '@/contexts/MagneticScrollContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Luca Portfolio | Professional Developer',
-  description: 'Modern portfolio showcasing skills, projects, and professional experience. Built with Next.js, TypeScript, and Tailwind CSS.',
-  keywords: ['portfolio', 'developer', 'web development', 'react', 'next.js'],
-  authors: [{ name: 'Luca' }],
-  viewport: 'width=device-width, initial-scale=1',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Luca Portfolio | Professional Developer',
-    description: 'Modern portfolio showcasing skills, projects, and professional experience.',
-    type: 'website',
-    locale: 'en_US',
-  },
+  title: 'Luca - Portfolio',
+  description: 'Full-stack developer portfolio showcasing innovative solutions and exceptional user experiences.',
 }
 
 export default function RootLayout({
@@ -26,12 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
-        <ProgressiveHeader />
-        <main className="min-h-screen">
+    <html lang="en">
+      <body className={inter.className}>
+        <MagneticScrollProvider>
+          <ProgressiveHeader />
           {children}
-        </main>
+        </MagneticScrollProvider>
       </body>
     </html>
   )

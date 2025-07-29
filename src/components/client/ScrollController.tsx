@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { useMagneticScroll } from '@/contexts/MagneticScrollContext'
 
 interface ScrollControllerProps {
   isScrolling: boolean
@@ -8,14 +9,17 @@ interface ScrollControllerProps {
 }
 
 const ScrollController: React.FC<ScrollControllerProps> = ({ isScrolling, setIsScrolling }) => {
+  const { isMagneticScrollEnabled } = useMagneticScroll()
+  
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout
     let lastScrollTime = 0
-    const scrollCooldown = 100
+    const scrollCooldown = 150  // Increased cooldown
     let isSnapping = false
+    let ticking = false
 
     const snapToSection = () => {
-      if (isSnapping) return
+      if (isSnapping || !isMagneticScrollEnabled) return
       
       const sections = document.querySelectorAll('.snap-section')
       const scrollPosition = window.scrollY
@@ -54,35 +58,56 @@ const ScrollController: React.FC<ScrollControllerProps> = ({ isScrolling, setIsS
     }
 
     const handleScroll = () => {
+      if (ticking) return
+      
       const now = Date.now()
       
       if (now - lastScrollTime < scrollCooldown && isScrolling) {
         return
       }
       
-      lastScrollTime = now
-      setIsScrolling(true)
-      
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {
-        setIsScrolling(false)
-        // Add magnetic snap after scroll stops
-        setTimeout(snapToSection, 100)
-      }, 150)
+      ticking = true
+      requestAnimationFrame(() => {
+        lastScrollTime = now
+        setIsScrolling(true)
+        
+        clearTimeout(scrollTimeout)
+        scrollTimeout = setTimeout(() => {
+          setIsScrolling(false)
+          if (isMagneticScrollEnabled) {
+            setTimeout(snapToSection, 100)
+          }
+        }, 200)  // Increased timeout
+        
+        ticking = false
+      })
     }
 
-    // Add CSS scroll-snap behavior
+    // Optimized CSS injection
     const addScrollSnapCSS = () => {
+      const existingStyle = document.getElementById('magnetic-scroll-styles')
+      if (existingStyle) {
+        existingStyle.remove()
+      }
+      
       const style = document.createElement('style')
-      style.textContent = `
+      style.id = 'magnetic-scroll-styles'
+      style.textContent = isMagneticScrollEnabled ? `
         html {
-          scroll-snap-type: y mandatory;
+          scroll-snap-type: y proximity;
         }
         .snap-section {
           scroll-snap-align: start;
-          scroll-snap-stop: always;
+        }
+      ` : `
+        html {
+          scroll-snap-type: none;
+        }
+        .snap-section {
+          scroll-snap-align: none;
         }
       `
+      
       document.head.appendChild(style)
       return style
     }
@@ -97,7 +122,7 @@ const ScrollController: React.FC<ScrollControllerProps> = ({ isScrolling, setIsS
         styleElement.parentNode.removeChild(styleElement)
       }
     }
-  }, [isScrolling, setIsScrolling])
+  }, [isScrolling, setIsScrolling, isMagneticScrollEnabled])
 
   return null
 }

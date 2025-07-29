@@ -113,7 +113,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         >
           <Link
             href="/#projects"
-            className="inline-flex items-center text-text-secondary hover:text-accent-500 transition-colors group"
+            className="inline-flex items-center text-text-secondary hover:text-accent-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-500/50 focus:ring-offset-2 focus:ring-offset-primary-800 rounded-md px-2 py-1 -mx-2 -my-1 active:scale-95 group"
           >
             <ArrowLeftIcon className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Projects

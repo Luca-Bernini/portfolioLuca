@@ -11,46 +11,48 @@ const AboutSection = () => {
           
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-text-secondary text-lg sm:text-xl leading-relaxed mb-6">
-              I'm a passionate full-stack developer with a keen eye for design and a love for creating 
-              seamless user experiences. With expertise in modern web technologies, I transform ideas 
-              into elegant, performant applications that make a difference.
+              I'm a SecDevOps student with a passion for technology and cybersecurity. I've studied 
+              cloud infrastructures such as AWS, systems administration, networking, cybersecurity, 
+              and programming with Python. My education has given me a comprehensive understanding 
+              of secure development practices and modern infrastructure management.
             </p>
             
             <p className="text-text-secondary text-lg sm:text-xl leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-              projects, or sharing knowledge with the developer community.
+              Currently, I work at McDonald's while pursuing my studies, which has taught me valuable 
+              skills in teamwork, customer service, and working under pressure. I'm always eager to 
+              learn new technologies and apply my knowledge to real-world challenges.
             </p>
           </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-primary-800/50 backdrop-blur-sm border border-primary-700 rounded-xl p-6 hover:border-accent-500 transition-colors">
-            <h3 className="text-xl font-semibold text-text-primary mb-4">Frontend</h3>
+            <h3 className="text-xl font-semibold text-text-primary mb-4">Cloud & Infrastructure</h3>
             <ul className="space-y-2 text-text-secondary">
-              <li>React & Next.js</li>
-              <li>TypeScript</li>
-              <li>Tailwind CSS</li>
-              <li>Framer Motion</li>
+              <li>AWS Services</li>
+              <li>Cloud Architecture</li>
+              <li>Infrastructure as Code</li>
+              <li>System Administration</li>
             </ul>
           </div>
           
           <div className="bg-primary-800/50 backdrop-blur-sm border border-primary-700 rounded-xl p-6 hover:border-accent-500 transition-colors">
-            <h3 className="text-xl font-semibold text-text-primary mb-4">Backend</h3>
+            <h3 className="text-xl font-semibold text-text-primary mb-4">Security & DevOps</h3>
             <ul className="space-y-2 text-text-secondary">
-              <li>Node.js</li>
-              <li>PostgreSQL</li>
-              <li>Prisma</li>
-              <li>API Development</li>
+              <li>Cybersecurity</li>
+              <li>Network Security</li>
+              <li>DevSecOps Practices</li>
+              <li>Security Monitoring</li>
             </ul>
           </div>
           
           <div className="bg-primary-800/50 backdrop-blur-sm border border-primary-700 rounded-xl p-6 hover:border-accent-500 transition-colors">
-            <h3 className="text-xl font-semibold text-text-primary mb-4">Tools</h3>
+            <h3 className="text-xl font-semibold text-text-primary mb-4">Programming & Tools</h3>
             <ul className="space-y-2 text-text-secondary">
-              <li>Git & GitHub</li>
-              <li>Docker</li>
-              <li>Vercel</li>
-              <li>VS Code</li>
+              <li>Python</li>
+              <li>Networking Protocols</li>
+              <li>Git & Version Control</li>
+              <li>Linux Systems</li>
             </ul>
           </div>
         </div>
