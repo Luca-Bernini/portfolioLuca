@@ -75,7 +75,7 @@ export default function ParallaxSection() {
                     width: 300px;
                     height: 400px;
                     margin: 20px;
-                    background: #f5f5f5;
+                    background: #333333;
                     overflow: hidden;
                     border-radius: 8px;
                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -100,9 +100,9 @@ export default function ParallaxSection() {
                 }
 
                 .img-container h2 {
-                    color: #8df0cc;
+                    color: #FF0000;
                     margin: 0;
-                    font-family: "Azeret Mono", monospace;
+                    font-family: "Inter", sans-serif;
                     font-size: 50px;
                     font-weight: 700;
                     letter-spacing: -3px;
@@ -118,7 +118,7 @@ export default function ParallaxSection() {
                     left: 0;
                     right: 0;
                     height: 5px;
-                    background: #8df0cc;
+                    background: #FF0000;
                     bottom: 50px;
                     transform-origin: 0%;
                 }

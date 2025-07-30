@@ -23,7 +23,7 @@ const certifications: Certification[] = [
     name: 'AWS Cloud Practitioner',
     provider: 'Amazon Web Services',
     icon: CloudIcon,
-    color: 'from-orange-500 to-yellow-500',
+    color: 'from-accent-500 to-accent-600',
     date: '2024',
     status: 'completed',
     credentialId: 'AWS-CCP-XXXXXX',
@@ -35,7 +35,7 @@ const certifications: Certification[] = [
     name: 'AWS Solutions Architect Associate',
     provider: 'Amazon Web Services',
     icon: CloudIcon,
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-accent-600 to-accent-700',
     date: 'Next Up',
     status: 'next-up'
   },
@@ -44,7 +44,7 @@ const certifications: Certification[] = [
     name: 'CCNA: Enterprise Networking',
     provider: 'Cisco',
     icon: ShieldCheckIcon,
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-accent-700 to-accent-500',
     date: 'Working on it',
     status: 'next-up'
   }

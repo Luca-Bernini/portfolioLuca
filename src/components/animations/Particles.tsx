@@ -16,8 +16,8 @@ interface ParticlesProps {
   className?: string;
 }
 
-// Updated default colors to red and white
-const defaultColors: string[] = ["#FF0000", "#FFFFFF", "#FF4444", "#FFAAAA"];
+// Default colors aligned with design system
+const defaultColors: string[] = ["#FF0000", "#FFFFFF", "#CC0000", "#FF3333"];
 
 const hexToRgb = (hex: string): [number, number, number] => {
   hex = hex.replace(/^#/, "");

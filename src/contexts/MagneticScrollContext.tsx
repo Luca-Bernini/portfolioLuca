@@ -22,7 +22,7 @@ interface MagneticScrollProviderProps {
 }
 
 export const MagneticScrollProvider: React.FC<MagneticScrollProviderProps> = ({ children }) => {
-  const [isMagneticScrollEnabled, setIsMagneticScrollEnabled] = useState(true)
+  const [isMagneticScrollEnabled, setIsMagneticScrollEnabled] = useState(false)
 
   const toggleMagneticScroll = () => {
     setIsMagneticScrollEnabled(prev => !prev)
