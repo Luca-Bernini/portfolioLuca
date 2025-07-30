@@ -237,7 +237,7 @@ const DevOpsProjectPage = () => {
           </div>
         </motion.div>
 
-        {/* Architecture Diagram Placeholder */}
+        {/* Architecture Diagram */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -247,17 +247,16 @@ const DevOpsProjectPage = () => {
         >
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Architecture Overview</h2>
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-accent-500/30 transition-all duration-300">
-            <div className="aspect-video bg-white/5 rounded-lg flex items-center justify-center border-2 border-dashed border-white/20 hover:border-accent-500/50 transition-all duration-300">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-white text-lg font-medium">Architecture Diagram</p>
-                <p className="text-white/60 text-sm mt-2">Visual representation of the AWS infrastructure</p>
-              </div>
+            <div className="aspect-video bg-white/5 rounded-lg overflow-hidden border border-white/10">
+              <img 
+                src="/images/infrastruttura flaskapp.drawio.png" 
+                alt="AWS Infrastructure Architecture Diagram" 
+                className="w-full h-full object-contain"
+              />
             </div>
+            <p className="text-white/70 text-center mt-4 text-sm">
+              Complete AWS infrastructure setup showing VPC configuration, load balancing, auto-scaling, and database architecture
+            </p>
           </div>
         </motion.div>
 
