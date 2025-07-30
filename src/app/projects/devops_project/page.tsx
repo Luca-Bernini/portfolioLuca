@@ -16,7 +16,7 @@ const DevOpsProjectPage = () => {
   // Create parallax effect for background
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
 
-  const toggleSection = (sectionId) => {
+  const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => ({
       ...prev,
       [sectionId]: !prev[sectionId]
