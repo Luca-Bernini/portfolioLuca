@@ -2,8 +2,12 @@
 const nextConfig = {
   output: 'standalone',
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'via.placeholder.com'],
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      },
       {
         protocol: 'https',
         hostname: '**',

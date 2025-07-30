@@ -34,7 +34,7 @@ const projectsData: Record<string, ProjectData> = {
     ],
     liveUrl: 'https://ecommerce-demo.vercel.app',
     githubUrl: 'https://github.com/luca/ecommerce-platform',
-    images: ['/api/placeholder/800/600', '/api/placeholder/800/600', '/api/placeholder/800/600']
+    images: ['https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+1', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+2', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+3']
   },
   'task-management-app': {
     title: 'Task Management App',
@@ -53,7 +53,7 @@ const projectsData: Record<string, ProjectData> = {
     ],
     liveUrl: 'https://taskmanager-demo.herokuapp.com',
     githubUrl: 'https://github.com/luca/task-management-app',
-    images: ['/api/placeholder/800/600', '/api/placeholder/800/600', '/api/placeholder/800/600']
+    images: ['https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+1', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+2', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+3']
   },
   'ai-analytics-dashboard': {
     title: 'AI-Powered Analytics Dashboard',
@@ -72,7 +72,7 @@ const projectsData: Record<string, ProjectData> = {
     ],
     liveUrl: 'https://ai-dashboard-demo.netlify.app',
     githubUrl: 'https://github.com/luca/ai-analytics-dashboard',
-    images: ['/api/placeholder/800/600', '/api/placeholder/800/600', '/api/placeholder/800/600']
+    images: ['https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+1', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+2', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+3']
   },
   'mobile-banking-app': {
     title: 'Mobile Banking App',
@@ -90,7 +90,7 @@ const projectsData: Record<string, ProjectData> = {
       'Multi-language support'
     ],
     githubUrl: 'https://github.com/luca/mobile-banking-app',
-    images: ['/api/placeholder/800/600', '/api/placeholder/800/600', '/api/placeholder/800/600']
+    images: ['https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+1', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+2', 'https://via.placeholder.com/800x600/333333/CCCCCC?text=Project+Image+3']
   }
 }
 
