@@ -43,7 +43,7 @@ const ScrollController: React.FC<ScrollControllerProps> = ({ isScrolling, setIsS
       
       if (closestSection) {
         isSnapping = true
-        const rect = closestSection.getBoundingClientRect()
+        const rect = (closestSection as Element).getBoundingClientRect()
         const sectionTop = scrollPosition + rect.top
         
         window.scrollTo({
