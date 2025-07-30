@@ -2,11 +2,12 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { ArrowLeftIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
 
 const DevOpsProjectPage = () => {
-  const [expandedSections, setExpandedSections] = useState({})
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({})
   
   // Track scroll progress for parallax effects
   const { scrollYProgress } = useScroll({
@@ -247,11 +248,12 @@ const DevOpsProjectPage = () => {
         >
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Architecture Overview</h2>
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-accent-500/30 transition-all duration-300">
-            <div className="aspect-video bg-white/5 rounded-lg overflow-hidden border border-white/10">
-              <img 
+            <div className="aspect-video bg-white/5 rounded-lg overflow-hidden border border-white/10 relative">
+              <Image 
                 src="/images/infrastruttura flaskapp.drawio.png" 
                 alt="AWS Infrastructure Architecture Diagram" 
-                className="w-full h-full object-contain"
+                fill
+                className="object-contain"
               />
             </div>
             <p className="text-white/70 text-center mt-4 text-sm">
