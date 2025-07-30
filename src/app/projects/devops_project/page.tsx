@@ -135,12 +135,12 @@ const DevOpsProjectPage = () => {
         {/* Hero Section */}
         <div className="mb-12">
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-6 text-white"
+            className="text-4xl md:text-6xl font-bold mb-6 text-accent-500"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="text-accent-500">DevOps</span> Flask Application on <span className="text-accent-500">AWS</span>
+            DevOps Flask Application on AWS
           </motion.h1>
           <motion.p 
             className="text-xl text-white/80 mb-8 max-w-3xl leading-relaxed"
