@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://your-domain.com'),
+  metadataBase: new URL('https://portfolio-luca-ten.vercel.app'),
   alternates: {
     canonical: '/',
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://your-domain.com',
+    url: 'https://portfolio-luca-ten.vercel.app',
     title: 'Luca - SecDevOps Portfolio',
     description: 'SecDevOps student portfolio showcasing cloud infrastructure, cybersecurity projects, and AWS expertise.',
     siteName: 'Luca Portfolio',
@@ -89,7 +89,7 @@ export default function RootLayout({
     "name": "Luca",
     "jobTitle": "SecDevOps Student",
     "description": "SecDevOps student specializing in cloud infrastructure, cybersecurity, and AWS services",
-    "url": "https://your-domain.com",
+    "url": "https://portfolio-luca-ten.vercel.app",
     "sameAs": [
       "https://linkedin.com/in/luca",
       "https://github.com/luca"

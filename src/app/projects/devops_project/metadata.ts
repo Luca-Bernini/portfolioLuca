@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'DevOps Flask Application on AWS - Luca Portfolio',
     description: 'Complete DevOps project showcasing Flask application deployment on AWS with CI/CD pipeline, Infrastructure as Code, load testing, and monitoring.',
     type: 'article',
-    url: 'https://your-domain.com/projects/devops_project',
+    url: 'https://portfolio-luca-ten.vercel.app/projects/devops_project',
     images: [
       {
         url: '/images/og-image.svg',
