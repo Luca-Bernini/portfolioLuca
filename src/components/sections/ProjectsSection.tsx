@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import { projects } from '@/data/projects'
 
@@ -28,10 +29,11 @@ const ProjectsSection = () => {
               className="group bg-primary-800/50 backdrop-blur-sm border border-primary-700 rounded-xl overflow-hidden hover:border-accent-500 transition-all duration-300 hover:shadow-lg hover:shadow-accent-500/10"
             >
               <div className="aspect-[16/9] bg-gradient-to-br from-accent-500/20 to-primary-700 relative overflow-hidden">
-                <img 
+                <Image 
                   src={project.imageUrl} 
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent" />
               </div>

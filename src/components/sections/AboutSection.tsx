@@ -11,15 +11,15 @@ const AboutSection = () => {
           
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-text-secondary text-lg sm:text-xl leading-relaxed mb-6">
-              I'm a SecDevOps student with a passion for technology and cybersecurity. I've studied 
+              I&apos;m a SecDevOps student with a passion for technology and cybersecurity. I&apos;ve studied 
               cloud infrastructures such as AWS, systems administration, networking, cybersecurity, 
               and programming with Python. My education has given me a comprehensive understanding 
               of secure development practices and modern infrastructure management.
             </p>
             
             <p className="text-text-secondary text-lg sm:text-xl leading-relaxed">
-              Currently, I work at McDonald's while pursuing my studies, which has taught me valuable 
-              skills in teamwork, customer service, and working under pressure. I'm always eager to 
+              Currently, I work at McDonald&apos;s while pursuing my studies, which has taught me valuable 
+              skills in teamwork, customer service, and working under pressure. I&apos;m always eager to 
               learn new technologies and apply my knowledge to real-world challenges.
             </p>
           </div>

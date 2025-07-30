@@ -8,12 +8,13 @@ import {
     useTransform,
 } from "framer-motion" // Changed from "motion/react" to match your dependencies
 import { useRef } from "react"
+import Image from "next/image"
 
 function useParallax(value: MotionValue<number>, distance: number) {
     return useTransform(value, [0, 1], [-distance, distance])
 }
 
-function Image({ id }: { id: number }) {
+function ParallaxImage({ id }: { id: number }) {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: ref })
     const y = useParallax(scrollYProgress, 300)
@@ -22,9 +23,12 @@ function Image({ id }: { id: number }) {
         <section className="img-container">
             <div ref={ref}>
                 {/* Using placeholder images since we don't have the actual images */}
-                <img
+                <Image
                     src={`https://source.unsplash.com/random/300x400?cityscape&sig=${id}`}
-                    alt="Cityscape image"
+                    alt={`Cityscape image ${id}`}
+                    width={300}
+                    height={400}
+                    style={{ objectFit: 'cover' }}
                 />
             </div>
             <motion.h2
@@ -47,7 +51,7 @@ export default function ParallaxSection() {
     return (
         <div id="parallax" className="parallax-container">
             {[1, 2, 3, 4, 5].map((image) => (
-                <Image key={image} id={image} />
+                <ParallaxImage key={image} id={image} />
             ))}
             <motion.div className="progress" style={{ scaleX }} />
             
