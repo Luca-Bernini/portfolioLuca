@@ -11,7 +11,7 @@ export default function NotFound() {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h1 className="text-8xl font-bold text-accent-500 mb-4">404</h1>
           <h2 className="text-2xl font-semibold text-text-primary mb-4">
