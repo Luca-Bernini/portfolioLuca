@@ -143,7 +143,7 @@ const CertificationsSection = () => {
                         {/* Verification Badge */}
                         <div className="flex items-center space-x-1">
                           <CheckBadgeIcon className="w-4 h-4 text-green-500" />
-                          <span className="text-xs text-green-500 font-medium">Verified</span>
+                          {/* <span className="text-xs text-green-500 font-medium">Verified</span> */}
                         </div>
                       </>
                     ) : (
@@ -160,7 +160,7 @@ const CertificationsSection = () => {
                   </div>
                   
                   {/* Verify Link for completed certifications */}
-                  {isCompleted && cert.verifyUrl && (
+                  {/* {isCompleted && cert.verifyUrl && (
                     <motion.a
                       href={cert.verifyUrl}
                       target="_blank"
@@ -170,7 +170,7 @@ const CertificationsSection = () => {
                     >
                       Verify Credential →
                     </motion.a>
-                  )}
+                  )} */}
                 </div>
                 
                 {/* Subtle border glow effect */}
