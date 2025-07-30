@@ -135,12 +135,12 @@ const DevOpsProjectPage = () => {
         {/* Hero Section */}
         <div className="mb-12">
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-500 via-black via-red-500 to-white bg-clip-text text-transparent"
+            className="text-4xl md:text-6xl font-bold mb-6 text-white"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            DevOps Flask Application on AWS
+            <span className="text-accent-500">DevOps</span> Flask Application on <span className="text-accent-500">AWS</span>
           </motion.h1>
           <motion.p 
             className="text-xl text-white/80 mb-8 max-w-3xl leading-relaxed"
@@ -196,7 +196,7 @@ const DevOpsProjectPage = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Project Overview</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white">Project Overview</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-accent-500/30 transition-all duration-300">
@@ -246,7 +246,7 @@ const DevOpsProjectPage = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Architecture Overview</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white">Architecture Overview</h2>
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-accent-500/30 transition-all duration-300">
             <div className="aspect-video bg-white/5 rounded-lg overflow-hidden border border-white/10 relative">
               <Image 
@@ -270,7 +270,7 @@ const DevOpsProjectPage = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Technical Implementation</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white">Technical Implementation</h2>
           <div className="space-y-4">
             {sections.map((section, index) => {
               const isExpanded = expandedSections[section.id]
@@ -340,7 +340,7 @@ const DevOpsProjectPage = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Technologies Used</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white">Technologies Used</h2>
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
             <div className="flex flex-wrap gap-3">
               {technologies.map((tech, index) => (
@@ -366,7 +366,7 @@ const DevOpsProjectPage = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Key Results</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white">Key Results</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-accent-500/30 transition-all duration-300">
               <h3 className="text-xl font-semibold text-accent-400 mb-4">Performance & Scalability</h3>
