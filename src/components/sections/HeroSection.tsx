@@ -45,7 +45,7 @@ const HeroSection = () => {
             <span 
               className={`transition-all duration-1000 ease-out transform delay-200 ${
                 showName ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              } text-red-600`}
+              } text-accent-500`}
             >
               Bernini
             </span>
