@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { ProgressiveHeader } from '@/components/ui'
 import { MagneticScrollProvider } from '@/contexts/MagneticScrollContext'
+import { Analytics } from "@vercel/analytics/next"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -119,6 +121,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <Analytics />
         <MagneticScrollProvider>
           <ProgressiveHeader />
           {children}
